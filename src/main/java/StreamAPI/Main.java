@@ -1,4 +1,7 @@
-import java.io.PrintStream;
+package StreamAPI;
+
+import StreamAPI.Data;
+
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,8 +17,7 @@ public class Main {
 
             List <Person> person2 = person.stream()
                     // .map(pers ->new Person(pers.getLastName(), "Иванов",pers.getAge()))
-                    .distinct()
-                   // .filter(p -> p.getAge()<30 )
+                    .filter(p -> p.getAge()<30 )
                     .sorted()
                     .collect(Collectors.toList());
 
